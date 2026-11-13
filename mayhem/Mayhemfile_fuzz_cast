@@ -1,0 +1,9 @@
+project: savantenvs/NumKong
+target: fuzz_cast
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cast/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cast
+    libfuzzer: true
+    timeout: 10
